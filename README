@@ -1,0 +1,3 @@
+Convert To Encoding Tool
+
+Alters the file encoding of all files in the selected directory, filtering according to the file extension(s) specified.
