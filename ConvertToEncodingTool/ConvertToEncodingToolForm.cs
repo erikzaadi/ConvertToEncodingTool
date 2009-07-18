@@ -71,7 +71,10 @@ namespace ConvertToEncodingTool
             {
                 if (listBoxFileExtensions.Items.Count > 0 && !listBoxFileExtensions.Items.Contains(file.Extension))
                     continue;
-                string contents = File.ReadAllText(file.FullName, GetFileEncoding(file.FullName));
+                Encoding current = GetFileEncoding(file.FullName);
+                if (current == encoding)
+                    continue;
+                string contents = File.ReadAllText(file.FullName, current);
                 File.WriteAllText(file.FullName, contents, encoding);
                 ++altered;
             }
