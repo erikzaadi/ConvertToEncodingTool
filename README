@@ -1,3 +1,15 @@
 Convert To Encoding Tool
 
-Alters the file encoding of all files in the selected directory, filtering according to the file extension(s) specified.
+Alters the file encoding either of all files in the specified root directory, filtering according to the file extension(s) specified,
+or a single specific file.
+
+Kudos to Richard Lopes for http://www.codeproject.com/KB/recipes/command_line.aspx (Used in Console project)
+
+EncodingConverter:
+	Core library that alters the file(s) encoding
+	
+Console
+	Console application that uses the above library (use with -help for details)
+	
+Winform
+	Winform application that uses the above library
